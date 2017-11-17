@@ -1,7 +1,12 @@
-library("deldir")
+library("deldir") #Install those !!
 library("R.matlab")
 
-setwd("~/OneDrive - UCL/Machine Learning/Exercise Session 1 - Vector Quantization")
+#########################################################################
+#This is an exemple of the Kmeans algorithm (with some variations) with a fixed cluster number of 10.
+#########################################################################
+
+
+setwd("C:/Users/Lucien/Desktop/DataAnalysis/Classification (Kmeans)")
 mat=readMat("dataset_1.mat")
 matD=as.data.frame(mat)
 matD = data.matrix(matD)
@@ -13,8 +18,7 @@ plot(matD)
 vect = c(1:length(matD[,1]))
 datF = as.data.frame(matD)
 
-centroids = matrix(rnorm(n = 50, mean = 1.25, sd = 0.5),nrow=10, ncol=2, byrow = TRUE)
-#this is the line that gives an error.
+centroids = matrix(rnorm(n = 20, mean = 1.25, sd = 0.5),nrow=10, ncol=2, byrow = TRUE)
 
 
 matD = data.matrix(matD)
