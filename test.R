@@ -40,4 +40,10 @@ plot(res.ward)
 
 
 #Preparing HCPC data for analysis 
-res.hcpc = 
+res.hcpc = HCPC(Data, consol = FALSE)
+Dataclust = res.hcpc$data.clust
+
+library(MASS)
+
+#discriminant analysis
+res.lda = lda(Dataclust$)
